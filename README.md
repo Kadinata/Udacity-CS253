@@ -1,5 +1,5 @@
 # README #
-* This is a repository for Udacity Web Development course project
+* This is a repository for Udacity Web Development course projects
 
 ### Author Details ###
 * _name_: Kevin Adinata
