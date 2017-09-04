@@ -1,0 +1,16 @@
+{% extends "blog_base.html" %}
+
+{% block content %}
+	{% for post in blogposts %}
+		<div class="entry">
+			<div class="entry-title-bar">
+				<div class="blog-subject">
+					<a href="/blog/{{post.key().id()}}">{{post.subject}}</a>
+				</div>
+				<div class="submission-date">{{post.created.strftime('%A, %B %d, %Y')}}</div>
+			</div>
+			<pre class="blog-content">{{post.content}}</pre>
+		</div>
+	{% endfor %}
+	<div class="query-time-info"> Queried {{age}} seconds ago</div>
+{% endblock %}

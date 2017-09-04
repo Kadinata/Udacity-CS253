@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<title>Login</title>
+		<style>
+			body {
+				font-family: sans-serif;
+				margin: 0 auto;
+				padding: 10px;
+			}
+			h2 {
+				text-align: center;
+			}
+			form {
+				margin: 0 auto;
+				width: 1000px;
+			}
+
+			.row {padding: 1px; margin: 1px;}
+			.label {
+				display: inline-block;
+				width: 40%;
+				text-align: right;
+				padding-right: 2px;
+			}
+
+			input {
+				width: 200px;
+				padding: 2px;
+			}
+
+			input[type=submit] {
+				width: 200px;
+			}
+
+			.error {
+				color: red;
+			}
+		</style>
+	</head>
+	<body>
+		<h2>Login</h2>
+		<form method="post">
+		<div class ="row">
+			<span class="label">Username</span>
+			<input type="text" name="username">
+		</div>
+		<div class ="row">
+			<span class="label">Password</span>
+			<input type="password" name="password">
+		</div>
+		{% if error %}
+			<div class ="row">
+			    <span class="label"></span>
+			    <span class="error">{{error}}</span>
+			</div>
+		{% endif %}
+		<div class="row">
+			<span class="label"></span>
+			<input type="submit" value="Login">
+		</div>
+		</form>
+	</body>
+</html>

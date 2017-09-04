@@ -1,0 +1,51 @@
+{% extends "blog_base.html" %}
+
+{% block content %}
+
+	<style type="text/css">
+
+		.error {
+			color: red;
+		}
+
+		label {
+			display: block;
+			font-size: 20px;
+			padding-bottom: 2px;
+			margin-bottom: 2px;
+		}
+
+		input[type=text] {
+			width: 100%;
+			font-size: 20px;
+			padding: 2px;
+		}
+
+		textarea {
+			width: 100%;
+			height: 300px;
+			font-size: 17px;
+			font-family: monospace;
+		}
+
+		input[type=submit] {
+			font-size: 24px;
+		}
+	</style>
+
+	<div class="entry">
+		<form method="post">
+			<label>
+				<div>Subject</div>
+				<input type="text" name="subject" value="{{subject}}">
+			</label>
+			<br>
+			<label>
+				<div>Content</div>
+				<textarea name="content">{{content}}</textarea>
+			</label>
+			<div class="error">{{error}}</div>
+			<input type="submit">
+		</form>
+	</div>
+{% endblock %}

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<title>Welcome {{uname}}</title>
+	</head>
+
+	<style type="text/css">
+		body {
+			font-family: sans-serif;
+			width: 800px;
+			margin: 0 auto;
+			padding: 10px;
+		}
+
+		h1 {
+			text-align: center;
+		}
+
+		input[type=submit] {
+			display: block;
+			margin: 0 auto;
+		}
+	</style>
+
+	<body>
+		<h1>Welcome, {{uname}}!</h1>
+		<form method="post">
+			<input type="submit" value="Logout">
+		</form>
+	</body>
+</html>

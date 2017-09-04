@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<title>Demo Blog</title>
+	</head>
+	<style type="text/css">
+		body {
+			font-family: sans-serif;
+			box-sizing:border-box;
+			width: 100%;
+			margin: 6px;
+			padding: 10px;
+		}
+
+		.blog-name {
+			font-size: 45px;
+			font-weight: bold;
+			text-align: center;
+			margin: 20px 0 20px 0;
+		}
+
+		.entry {
+			padding: 6px;
+			margin-bottom: 10px;
+		}
+
+		.submission-date {
+			display: inline-block;
+			text-align: right;
+			width: 29.3%;
+		}
+
+		.blog-subject {
+			display: inline-block;
+			width: 70%;
+			font-size: 28px;
+			overflow: hidden;
+		}
+
+		div a {
+			text-decoration: none;
+			color: black;
+		}
+
+		.blog-content {
+			font-size: 14px;
+			font-family: monospace;
+			text-align: justify;
+			white-space: pre-wrap;
+		}
+
+		.entry-title-bar {
+			border-bottom: 1px solid;
+		}
+
+		.query-time-info {
+			font-size: 10px;
+			text-align: right;
+		}
+
+		.blog-entries {
+			margin: 0 auto;
+			width: 720px;
+		}
+	</style>
+	<body>
+		<div class="blog-name">
+			<a href="/blog">Demo Blog</a>
+		</div>
+		<div class="blog-entries">
+			{% block content %}
+
+			{% endblock %}
+		</div>
+	</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<title>Sign up Page </title>
+		<style>
+			body {
+				font-family: sans-serif;
+				margin: 0 auto;
+				padding: 10px;
+			}
+			h2 {
+				text-align: center;
+			}
+			form {
+				margin: 0 auto;
+				width: 1000px;
+			}
+
+			.row {padding: 1px; margin: 1px;}
+			.label {
+				display: inline-block;
+				width: 40%;
+				text-align: right;
+				padding-right: 2px;
+			}
+
+			input {
+				width: 200px;
+				padding: 2px;
+			}
+
+			input[type=submit] {
+				width: 200px;
+			}
+
+			.error {
+				color: red;
+			}
+		</style>
+	</head>
+	<body>
+		<h2>Sign up</h2>
+		<form method="post">
+		<div class ="row">
+			<span class="label">Username</span>
+			<input type="text" name="username" value="{{uname}}">
+			<span class="error">{{err_uname}}</span>
+		</div>
+		<div class ="row">
+			<span class="label">Password</span>
+			<input type="password" name="password">
+			<span class="error">{{err_passw}}</span>
+		</div>
+		<div class ="row">
+			<span class="label">Verify Password</span>
+			<input type="password" name="verify">
+			<span class="error">{{err_verify}}</span>
+		</div>
+		<div class ="row">
+			<span class="label">Email (optional)</span>
+			<input type="text" name="email" value="{{email}}">
+			<span class="error">{{err_email}}</span>
+		</div>
+		<div class="row">
+			<span class="label"></span>
+			<input type="submit" value="Create Account">
+		</div>
+		</form>
+	</body>
+</html>
